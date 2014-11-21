@@ -1,0 +1,567 @@
+/*
+* ExoSkeleton V0.1
+* Copyright 2014 James Delaney
+* Created at Detail. Design Studio
+* www.detail.ie
+
+* Adapted from Skeleton. Dave Gamache.
+* www.getskeleton.com
+
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 21/10/2013
+*/
+
+    /* Grid Width / Base */
+    .wrapper                                    { max-width: 1440px; margin: 0 auto; padding-left: 2.5%; padding-right: 2.5%;}
+
+    .container                                  { position: relative; width: 100%; }
+
+    .row                                        { margin-bottom: 25px; }
+
+    .container .column,
+    .container .columns                         { float: left; display: inline-block; box-sizing:border-box; -moz-box-sizing: border-box; }
+
+    .container .column,
+    .container .columns                         { margin-left: 1%; margin-right: 1%; }
+
+    .column.alpha, .columns.alpha               { margin-left: 0 !important;  }
+    .column.omega, .columns.omega               { margin-right: 0 !important; }
+
+    .grid .row                                  { margin-bottom: 25px;  }
+
+    /* Base 12 Column Grid */
+    .container .one.column,
+    .container .one.columns                     { width: 6.5%;  }
+    .container .two.columns                     { width: 15.0%; }
+    .container .three.columns                   { width: 23.5%; }
+    .container .four.columns                    { width: 32.0%; }
+    .container .five.columns                    { width: 40.5%; }
+    .container .six.columns                     { width: 49.0%; }
+    .container .seven.columns                   { width: 57.5%; }
+    .container .eight.columns                   { width: 66.0%; }
+    .container .nine.columns                    { width: 74.5%; }
+    .container .ten.columns                     { width: 83.0%; }
+    .container .eleven.columns                  { width: 91.5%; }
+    .container .twelve.columns                  { width: 100%;  }
+
+    .container .one-third.column                { width: 32%;   }
+    .container .two-thirds.column               { width: 66%;   }
+    .container .quarter.column                  { width: 23.5%; }
+
+
+    /* Base 16 Column Grid */
+    .container.sixteen .column,
+    .container.sixteen .columns                  { margin-left: 0.75%; margin-right: 0.75%; }
+
+    .container.sixteen .one.column,
+    .container.sixteen .one.columns              { width: 4.84375%;   }
+    .container.sixteen  .two.columns             { width: 11.1875%;   }
+    .container.sixteen  .three.columns           { width: 17.53125%;  }
+    .container.sixteen  .four.columns            { width: 23.875%;    }
+    .container.sixteen  .five.columns            { width: 30.21875%;  }
+    .container.sixteen  .six.columns             { width: 36.5625%;   }
+    .container.sixteen  .seven.columns           { width: 42.90625%;  }
+    .container.sixteen  .eight.columns           { width: 49.25%;     }
+    .container.sixteen  .nine.columns            { width: 55.921875%; }
+    .container.sixteen  .ten.columns             { width: 62.21875%;  }
+    .container.sixteen  .eleven.columns          { width: 68.515625%; }
+    .container.sixteen  .twelve.columns          { width: 74.8125%;   }
+    .container.sixteen  .thirteen.columns        { width: 81.109375%; }
+    .container.sixteen  .fourteen.columns        { width: 87.40625%;  }
+    .container.sixteen  .fifteen.columns         { width: 93.703125%; }
+    .container.sixteen  .sixteen.columns         { width: 100%;       }
+
+    .container.sixteen .one-third.column         { width: 32.3333333333%; }
+    .container.sixteen .two-third.column         { width: 66.4166666667%; }
+    .container.sixteen .one-quarter.column       { width: 23.875%;   }
+
+
+    /* Base 24 Column Grid */
+    .container.twentyfour .column,
+    .container.twentyfour .columns                       { margin-left: 0.5%; margin-right: 0.5%;}
+
+    .container.twentyfour .column.alpha, .container.twentyfour .columns.alpha               { margin-left: 0; }
+    .container.twentyfour .column.omega, .container.twentyfour .columns.omega               { margin-right: 0; float: right;}
+
+    /* Desktop + Tablet only columns */
+    .container.twentyfour  .one.column,
+    .container.twentyfour  .one.columns                     { width: 3.2%; }
+    .container.twentyfour  .two.columns                     { width: 7.333%; }
+
+    /* Minimum column size for mobile device */
+    .container.twentyfour  .three.columns                   { width: 11.62%; }
+    .container.twentyfour  .four.columns                    { width: 15.667%; }
+    .container.twentyfour  .five.columns                    { width: 19.833%; }
+    .container.twentyfour  .six.columns                     { width: 24.25%; }
+    .container.twentyfour  .seven.columns                   { width: 28.167%; }
+    .container.twentyfour  .eight.columns                   { width: 32.333%; }
+    .container.twentyfour  .nine.columns                    { width: 36.5%; }
+    .container.twentyfour  .ten.columns                     { width: 40.667%; }
+    .container.twentyfour  .eleven.columns                  { width: 44.833%; }
+    .container.twentyfour  .twelve.columns                  { width: 49.5%; }
+    .container.twentyfour  .thirteen.columns                { width: 53.167%; }
+    .container.twentyfour  .fourteen.columns                { width: 57.333%; }
+    .container.twentyfour  .fifteen.columns                 { width: 61.5%; }
+    .container.twentyfour  .sixteen.columns                 { width: 65.667%; }
+    .container.twentyfour  .seventeen.columns               { width: 69.833%; }
+    .container.twentyfour  .eighteen.columns                { width: 74%; }
+    .container.twentyfour  .nineteen.columns                { width: 78.167%; }
+    .container.twentyfour  .twenty.columns                  { width: 82.333%; }
+    .container.twentyfour  .twentyone.columns               { width: 86.5%; }
+    .container.twentyfour  .twentytwo.columns               { width: 90.667%; }
+    .container.twentyfour  .twentythree.columns             { width: 94.833%; }
+    .container.twentyfour  .twentyfour.columns              { width: 100%; }
+
+
+
+
+    /* Nested Column Classes */
+    .container .grid .row .column.omega:last-child,
+    .container .grid .row .columns.omega:last-child                          { float: right !important}
+
+        /* Offsets */
+    .container .offset-by-one                   { margin-left: 8.4500% !important; }
+    /*.container .offset-by-one-alpha             { margin-left: 9.3750% !important; }*/
+    .container .offset-by-two                   { margin-left: 16.925% !important; }
+    /*.container .offset-by-two-alpha             { margin-left: 17.850% !important; }*/
+    .container .offset-by-three                 { margin-left: 25.410% !important; }
+    /*.container .offset-by-three-alpha           { margin-left: 26.335% !important; }*/
+    .container .offset-by-four                  { margin-left: 33.950% !important; }
+    /*.container .offset-by-four-alpha            { margin-left: 34.875% !important; }*/
+    .container .offset-by-five                  { margin-left: 42.411% !important; }
+    /*.container .offset-by-five-alpha            { margin-left: 43.336% !important; }*/
+    .container .offset-by-six                   { margin-left: 50.900% !important; }
+    .container .offset-by-six-alpha             { margin-left: 49.975% !important; }
+    .container .offset-by-seven                 { margin-left: 59.400% !important; }
+    .container .offset-by-eight                 { margin-left: 67.895% !important; }
+    .container .offset-by-nine                  { margin-left: 76.385% !important; }
+    .container .offset-by-ten                   { margin-left: 84.875% !important; }
+    .container .offset-by-eleven                { margin-left: 93.365% !important; }
+
+    /* Style Guide Grids */
+
+    .container .grid .row div { text-align: center; overflow: hidden; line-height: 50px; max-height: 50px; padding-bottom: 35px; background-color:#e1e1e1;}
+
+    .container .grid-nested .row {margin-bottom: 25px}
+
+    .container .grid-nested .row div { padding: 7.5px; background-color:#e1e1e1;}
+
+    .container .grid-nested .row div .row { margin-bottom: 5px;}
+
+    .container .grid-nested .row div .row div { padding: 7.5px; background-color:#c1c1c1;}
+    .container .grid-nested .row div .row div .row div { padding: 7.5px; background-color:#a1a1a1;}
+
+    .container #masonit .masonry-block {margin-right: 1.15% !important; margin-bottom: 25px; margin-left: -0.001% !important; box-sizing: content-box; -moz-box-sizing: border-box; background-color: white;}
+    .container #masonit .masonry-block:last-child {margin-right: 0% !important; margin-left: -1%;}
+
+    .container #masonit-images .masonry-block {margin-right: 1.2% !important; margin-left: -0.001% !important; box-sizing: content-box; -moz-box-sizing: border-box; background-color: white;}
+    .container #masonit-images .masonry-block:last-child {margin-right: -0.001% !important; margin-left: -1%;}
+
+    .container .grid-nested .row div.nest-no-pad { padding: 10px 0px 10px 0px !important;}
+    .container .grid-nested .row div.nest-no-pad .row { padding: 0px !important;}
+    span.ten-padding { padding: 10px !important; display: inline-block;}
+    .row.background {background-color:#FAFAFA;}
+
+    .mobile-only {
+            display: none;
+    }
+
+    .tablet-only {
+        display: none;
+    }
+
+    .remove-bottom                              { margin-bottom: 0%; }
+
+
+/* 1440px Grid (Desktop)
+================================================== */
+
+    @media only screen and (min-width: 1024px) and (max-width: 1440px) {
+
+        .wrapper  { max-width: 1440px; margin: 0 auto; padding-left: 2.5%; padding-right: 2.5%;}
+
+
+        /*Typographic Changes */
+        body {
+        font-size: 16px;
+         }
+
+         h3 {
+            font-size: 25px;
+            margin-bottom: 3px;
+         }
+
+         p.lead {
+            font-size: 18px;
+            line-height: 1.453;
+         }
+
+        h1.extra-large {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-size: 68px;
+        line-height: 1.1;
+        max-width: 80%;
+        }
+
+        
+        
+    }
+
+/* 1240px Grid (Desktop)
+================================================== */
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+         .wrapper { max-width: 1240px; margin: 0 auto; padding-left: 2.5%; padding-right: 2.5%;}
+
+        body {
+        font-size: 14px;
+         }
+
+         h3 {
+            font-size: 21px;
+            margin-bottom: 3px;
+            line-height: 1.25;
+         }
+
+        p.lead {
+            font-size: 16px;
+            line-height: 1.453;
+         }
+
+        h1.extra-large {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-size: 54px;
+        line-height: 1.1;
+        max-width: 80%;
+        }
+
+
+        .wrapper { max-width: 960px; margin: 0 auto; padding-left: 2.5%; padding-right: 2.5%;}
+
+        /* Show Tablet Only Content */
+        .tablet-only                                { display: block; }
+        /* Hide on Tablet */
+        .s-hide                                   { display: none !important; }
+
+        .wrapper                                    { max-width: 960px; margin: 0 auto; padding-left: 2.5%; padding-right: 2.5%;}
+        .container                                  { width: 100%; }
+
+
+        .container .s-full                          { width: 100% !important; margin: 0px !important; }
+        .container .s-half                          { width: 49.050% !important; margin: 0px; }
+        .container .s-quarter                       { width: 23.5% !important; }
+        .container .s-sixth                         { width: 15% !important;}
+        .container .s-eight                         { width: 10.75% !important;}
+        .container .s-tenth                         { width: 8.2% !important;}
+
+        /* Uses css_browser_selector.js to fix percentages on webkit tablet browsers iPad */
+        .webkit .container .column,
+        .webkit .container .columns                         { margin-left: 1%; margin-right: 1%; }
+
+        /*  Resets to defaults for Chrome Tablet browser*/
+        .chrome .container .column,
+        .chrome .container .columns                         { margin-left: 0.925%; margin-right: 0.925%;}
+
+        body {
+        font-size: 14px;
+        }
+
+         h3 {
+            font-size: 21px;
+            margin-bottom: 3px;
+            line-height: 1.25;
+        }
+
+        p.lead {
+            font-size: 16px;
+            line-height: 1.453;
+        }
+
+        h1.extra-large {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-size: 44px;
+        line-height: 1.1;
+        max-width: 80%;
+        }
+
+        .caption {font-size: 10px; line-height: 1.34}
+
+        
+
+    }
+
+/* 960px Grid (Desktop)
+================================================== */
+
+    @media only screen and (min-width: 415px) and (max-width: 767px) {
+
+        
+        .wrapper { max-width: 960px; margin: 0 auto; padding-left: 2.5%; padding-right: 2.5%;}
+
+        /* Show Tablet Only Content */
+        .tablet-only                                { display: block; }
+        /* Hide on Tablet */
+        .s-hide                                     { display: none !important;  }
+
+        .wrapper                                    { max-width: 960px; margin: 0 auto; padding-left: 2.5%; padding-right: 2.5%;}
+        .container                                  { width: 100%; }
+
+
+        .container .s-full                          { width: 100% !important; margin: 0px !important; }
+        .container .s-half                          { width: 49.050% !important; margin: 0px; }
+        .container .s-quarter                       { width: 23.5% !important; }
+        .container .s-sixth                         { width: 15% !important;}
+        .container .s-eight                         { width: 10.75% !important;}
+        .container .s-tenth                         { width: 8.2% !important;}
+
+        /* Uses css_browser_selector.js to fix percentages on webkit tablet browsers iPad */
+        .webkit .container .column,
+        .webkit .container .columns                         { margin-left: 1%; margin-right: 1%; }
+
+        /*  Resets to defaults for Chrome Tablet browser*/
+        .chrome .container .column,
+        .chrome .container .columns                         { margin-left: 0.925%; margin-right: 0.925%;}
+
+
+        #masonit   .s-half.masonry-block            { padding-left: 0%; }
+
+        #masonit   .s-full.masonry-block            { padding-left: 0%; }
+
+        .overlay-content p {font-family: 'AtlasGroteskMedium'; font-size: 18px;}
+
+        .add-bottom { padding-bottom: 20px; margin-bottom: 20px; }
+        .add-half-bottom { padding-bottom: 10px; margin-bottom: 10px; }
+        .add-rule { border-bottom: 1px solid #ddd; }
+
+/* Mobile Typography Styles */
+        body {
+        font-size: 15px;
+        line-height: 1.38
+         }
+
+         h1 {
+            font-size: 28px;
+            line-height: 1.2;
+            margin-bottom: 0px;
+         }
+
+         h2 {
+            font-size: 20px;    
+            margin-bottom: -5px;
+         }
+
+         h3 {
+            font-size: 18px;
+            margin-bottom: -3px;
+         }
+
+         h4 {
+            font-size: 15px;
+            margin-bottom: 5px;
+            line-height: 17px
+         }
+
+         h5 {
+            font-size: 13px;
+            text-transform: uppercase;
+            margin-bottom: -2px;
+         }
+
+         h6 {
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-bottom: 0px;
+         }
+
+        p.lead {
+            font-size: 14px;
+            line-height: 1.453;
+            margin-bottom: 10px;
+        }
+
+         h3 {
+            font-size: 21px;
+            margin-bottom: 3px;
+            line-height: 1.35;
+         }
+
+        p.lead {
+            font-size: 16px;
+            line-height: 1.453;
+            margin-bottom: 10px;
+        }
+
+        div.content p { 
+            max-width: 540px;
+        }
+
+        h1.extra-large {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-size: 35px;
+        line-height: 1.1;
+        max-width: 80%;
+        }
+
+        .caption {font-size: 10px; line-height: 1.34}
+
+        
+    }
+
+
+/* 700px Grid (Desktop)
+================================================== */
+
+    @media only screen and (max-width: 414px) {
+
+        /* Show Mobile Only Content */
+        .mobile-only                                { display: block !important;}
+        /* Hide on Mobile */
+        .xs-hide                                    { display: none !important; }
+
+        /* Mobile Grid */
+        .wrapper                                    { max-width: 400px; margin: 0 auto; padding-left: 3.5%; padding-right: 3.5%;}
+        .container .quarter.column                  { width: 23.560%; }
+
+        .container .xs-full                         { width: 100% !important; margin: 0px !important;}
+        .container .xs-half                         { width: 49% !important; }
+        .container .xs-quarter                      { width: 23.5% !important; }
+        .container .xs-sixth                        { width: 15% !important;}
+        .container .xs-eight                        { width: 10.75% !important;}
+
+        .container .xs-omega                        {margin-right: 0% !important; margin-left: 0.75% !important;}
+        .container .xs-alpha                        {margin-left: 0% !important; margin-right: 0.75% !important;}
+
+        .container .xs-pad-bottom                    {margin-bottom: 12.5px;}
+
+        .tablet-only {
+        display: none;
+        }
+
+        .single-pad-bottom { margin-bottom: 7.25px !important;}
+
+
+        /* Mobile Lists */
+        .xs-full ul.small {margin-left: 5%;}
+        .xs-full ul {margin-left: 5%;}
+        .xs-full ul li ul {margin-top: -3px;}
+        ul ul li, ul ol li, ol ol li, ol ul li { margin-bottom: 3px; margin-top: 0px;}
+        ul .sub-list-li {width: 100%;}
+        ul .sub-list-li li { margin-bottom: -3px; }
+        ul .sub-list-li li span {vertical-align: middle !important;}
+
+        /* Masonry On Mobile */
+        #masonit .xs-full.masonry-block             { padding-left: 0%; }
+
+        .add-bottom { padding-bottom: 20px; margin-bottom: 20px; }
+        .add-half-bottom { padding-bottom: 10px; margin-bottom: 10px; }
+        .add-rule { border-bottom: 1px solid #ddd; }
+
+
+        /* Mobile Typography Styles */
+        body {
+        font-size: 12px;
+        line-height: 1.38
+         }
+
+         h1 {
+            font-size: 23px;
+            line-height: 1.2;
+            margin-bottom: 0px;
+         }
+
+         h2 {
+            font-size: 18px;    
+            margin-bottom: -5px;
+         }
+
+         h3 {
+            font-size: 15px;
+            margin-bottom: -3px;
+         }
+
+         h4 {
+            font-size: 13px;
+            margin-bottom: 5px;
+            line-height: 17px
+         }
+
+         h5 {
+            font-size: 10px;
+            text-transform: uppercase;
+            margin-bottom: -2px;
+         }
+
+         h6 {
+            font-size: 9px;
+            text-transform: uppercase;
+            margin-bottom: 0px;
+         }
+
+        p.lead {
+            font-size: 14px;
+            line-height: 1.453;
+            margin-bottom: 10px;
+        }
+
+        h1.extra-large {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-size: 25px;
+        line-height: 1.1;
+        max-width: 95%;
+        }
+
+        .overlay-content p {
+            font-size: 13px;
+        }
+
+        .caption {font-size: 10px; line-height: 1.34}
+
+        input[type="text"], input[type="password"], input[type="email"], textarea {
+            width: 95%;
+        }
+
+
+    }
+
+
+/* #Clearing
+================================================== */
+
+    /* Self Clearing Goodness */
+    .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }

@@ -1,0 +1,661 @@
+/* Meyer Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:0 0}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}dfn{font-style:italic}h1{font-size:2em;margin:0em 0}mark{background:#ff0;color:#000}.small,small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin-top:25px; margin-bottom:25px;}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+@font-face {
+	font-family: "Detail Atlas Light";
+	src: url("../fonts/atlas-grotesk-detail-light.eot");
+	src: url("../fonts/atlas-grotesk-detail-light.eot#iefix") format("embedded-opentype"),
+	url("../fonts/atlas-grotesk-detail-light.woff") format("woff"),
+	url("../fonts/atlas-grotesk-detail-light.ttf") format("truetype"),
+	url("../fonts/atlas-grotesk-detail-light.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Detail Atlas Regular";
+	src: url("../fonts/atlas-grotesk-detail-regular.eot");
+	src: url("../fonts/atlas-grotesk-detail-regular.eot#iefix") format("embedded-opentype"),
+	url("../fonts/atlas-grotesk-detail-regular.woff") format("woff"),
+	url("../fonts/atlas-grotesk-detail-regular.ttf") format("truetype"),
+	url("../fonts/atlas-grotesk-detail-regular.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Detail Atlas Medium";
+	src: url("../fonts/atlas-grotesk-detail-medium.eot");
+	src: url("../fonts/atlas-grotesk-detail-medium.eot#iefix") format("embedded-opentype"),
+	url("../fonts/atlas-grotesk-detail-medium.woff") format("woff"),
+	url("../fonts/atlas-grotesk-detail-medium.ttf") format("truetype"),
+	url("../fonts/atlas-grotesk-detail-medium.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Detail Atlas Bold";
+	src: url("../fonts/atlas-grotesk-detail-bold.eot");
+	src: url("../fonts/atlas-grotesk-detail-bold.eot#iefix") format("embedded-opentype"),
+	url("../fonts/atlas-grotesk-detail-bold.woff") format("woff"),
+	url("../fonts/atlas-grotesk-detail-bold.ttf") format("truetype"),
+	url("../fonts/atlas-grotesk-detail-bold.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Detail Atlas Black";
+	src: url("../fonts/atlas-grotesk-detail-black.eot");
+	src: url("../fonts/atlas-grotesk-detail-black.eot#iefix") format("embedded-opentype"),
+	url("../fonts/atlas-grotesk-detail-black.woff") format("woff"),
+	url("../fonts/atlas-grotesk-detail-black.ttf") format("truetype"),
+	url("../fonts/atlas-grotesk-detail-black.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Detail Atlas Typewriter Regular";
+	src: url("../fonts/atlas-typewriter-detail-regular.eot");
+	src: url("../fonts/atlas-typewriter-detail-regular.eot#iefix") format("embedded-opentype"),
+	url("../fonts/atlas-typewriter-detail-regular.woff") format("woff"),
+	url("../fonts/atlas-typewriter-detail-regular.ttf") format("truetype"),
+	url("../fonts/atlas-typewriter-detail-regular.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* #Basic Styles
+================================================== */
+	body {
+		background: #fff;
+		font: 18px 'Detail Atlas Regular', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		line-height: 1.428;
+		color: #444;
+		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+		-webkit-text-size-adjust: 100%;
+		text-rendering: optimizeLegibility;
+ }
+
+
+/* #Typography
+================================================== */
+	h1, h2, h3, h4, h5, h6 {
+		color: #181818;
+		font-family: 'Detail Atlas Bold', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-weight: normal;
+	}
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px; letter-spacing: -0.05em}
+	h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px; letter-spacing: -0.025em}
+	h3 { font-size: 28px; margin-top: 0px; line-height: 33px; margin-bottom: 0px; }
+	h4 { font-size: 21px; line-height: 35px; margin-bottom: 14px; }
+	h5 { font-size: 17px; line-height: 24px; }
+	h6 { font-size: 12.5px; line-height: 21px; text-transform: uppercase; letter-spacing: 0.05em;}
+
+	.subheader { color: #777; }
+
+	h1.extra-large {
+		margin-top: 100px;
+		margin-bottom: 100px;
+		font-size: 92px;
+		line-height: 108px;
+		}
+
+	img { max-width: 100%;}
+
+	.white-bg-image {
+		-webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.3);
+		-moz-box-shadow:    0px 0px 15px 0px rgba(50, 50, 50, 0.3);
+		box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.3);
+	}
+
+	p { margin: 0 0 17px 0; }
+	p img { margin: 0; }
+	p.lead { font-size: 21px; line-height: 27px; color: #777;  }
+	.white {color: #fff;}
+
+	em { font-style: italic; }
+	strong { font-family: 'Detail Atlas Bold', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+	small { font-size: 80%; line-height: 1.2;}
+	h1 small, h2 small { font-size: 70%; color: #777; font-family: 'Detail Atlas Light', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+	/* Padding Elements */
+
+	.top-ten-pad {padding-top: 10px !important;}
+	.top-thirtyfive-pad {padding-top: 35px !important;}
+
+	.single-rule {}
+	.double-rule {}
+	.quatro-rule {}
+	.octo-rule {}
+	.sixteen-rule {}
+
+
+
+	.double-pad-bottom {}
+	.single-pad-bottom { margin-bottom: 25px !important;}
+	.half-pad-bottom {}
+
+	.double-pad-bottom {}
+	.single-pad-top {}
+	.half-pad-top {}
+
+
+/*	Blockquotes  */
+	blockquote, blockquote p { font-size: 17px; line-height: 25px; color: #777; font-style: italic; }
+	blockquote { margin: 0 0 20px; padding: 0px 20px 0 19px; border-left: 1px solid #ddd; }
+	blockquote cite { display: block; font-size: 12px; color: #555; }
+	blockquote cite:before { content: "\2014 \0020"; }
+	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
+
+	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 14px 0 16px; height: 0; }
+	hr.medium {margin: 14px 0px 20px 0px;}
+	hr.no-top {margin: 0px 0px 25px 0px;}
+	hr.half {margin: 0px 0px 15px 0px;}
+	
+	.caption {color: #e42521; font-family: 'Detail Atlas Typewriter Regular', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 11px; line-height: 1.54; margin-top: 5px;}
+
+	.bold { font-family: 'Detail Atlas Black'}
+
+	.no-underline {text-decoration: none;}
+
+	.overlay-content p { font-size: 25px; line-height: 1.42; font-family: 'Detail Atlas Medium';}
+
+	.left-overlay-menu { line-height: 1.42; font-size: 12px;}
+
+	.project-secondary { font-family: 'Detail Atlas Medium'; color: #222; font-size: 12px; margin-top: 40px;}
+
+	.push-back-fullscreen-button { height: 44px !important; width: 44px !important;}
+
+	.rsSlide {
+		  content: '';
+		  display: inline-block;
+		  height: 100%;
+		  vertical-align: middle;
+		  margin-right: -0.25em; /* Adjusts for spacing */
+	}
+
+	.rsContent {
+		  display: inline-block;
+		  vertical-align: middle;
+		  /*width: 300px;*/
+	}
+
+/* #Links
+================================================== */
+	a, a:visited { color: #222; text-decoration: underline; outline: 0; }
+	a:hover, a:focus { color: #000; }
+	p a, p a:visited { line-height: inherit; }
+
+
+/* #Lists
+================================================== */
+	ul, ol { margin-bottom: 20px; }
+	ul { list-style: none outside; }
+	ol { list-style: decimal; }
+	ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+	ul.square { list-style: square outside; }
+	ul.circle { list-style: circle outside; }
+	ul.disc { list-style: disc outside; }
+	ul ul, ul ol,
+	ol ol, ol ul { margin: 2px 0 2px 30px; font-size: 90%;  }
+	ul ul li, ul ol li,
+	ol ol li, ol ul li { margin-bottom: 6px; list-style-type: circle; vertical-align: 3px }
+	li { line-height: 27px; margin-bottom: 12px; }
+	ul.large li { line-height: 21px; }
+	li p { line-height: 21px; }
+	ul.small { list-style: disc outside; font-size: 13px; line-height: 18px;}
+	ul.small li { line-height: 21px; margin-bottom:2px; }
+	ul.small li span {vertical-align: -0.115em; display: inline-block;}
+	ul.small .sub-list-li {vertical-align: top; position: relative; top: 2px;}
+	ul { list-style: disc outside;}
+	ul li { margin-bottom:0px; }
+	ul li span {vertical-align: middle; display: inline-block;}
+	ul .sub-list-li {vertical-align: top; position: relative; top: 2px; width: 100%;}
+
+
+/* #Images
+================================================== */
+
+	img.scale-with-grid {
+		max-width: 100%;
+		height: auto; }
+
+	#overlay {
+		display: none;
+		height: 90%;
+		width: 100%;
+		color: white;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+/* #Buttons
+================================================== */
+
+	.button,
+	button,
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"] {
+	  background: #e1e1e1; /* Old browsers */
+	  border: 1px solid #ccc;
+	  color: #333;
+	  display: inline-block;
+	  font-size: 14px;
+	  text-decoration: none;
+	  cursor: pointer;
+	  margin-bottom: 18px;
+	  line-height: normal;
+	  padding: 8px 10px 6px 10px;
+	  font-family: 'Detail Atlas Medium', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+
+	.button:hover,
+	button:hover,
+	input[type="submit"]:hover,
+	input[type="reset"]:hover,
+	input[type="button"]:hover {
+	  color: #fff;
+	  background: #000; /* Old browsers */
+	  border: 1px solid #888;
+	 }
+
+	.button:active,
+	button:active,
+	input[type="submit"]:active,
+	input[type="reset"]:active,
+	input[type="button"]:active {
+		border: 1px solid #666;
+		background: #e42521; /* Old browsers */
+		outline: none;
+	}
+
+	.button.full-width,
+	button.full-width,
+	input[type="submit"].full-width,
+	input[type="reset"].full-width,
+	input[type="button"].full-width {
+		width: 100%;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		text-align: center; }
+
+	/* Fix for odd Mozilla border & padding issues */
+	button::-moz-focus-inner,
+	input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+	}
+
+	.button.lrg {
+		padding: 15px 25px 15px 25px;
+		font-size: 16px;
+		margin-bottom: 0px;
+	}
+
+	.overlay-link {
+		font-size: 0.8em;
+		color: #e42521 !important;
+	}
+
+
+/* #Forms
+================================================== */
+
+	form {
+		margin-bottom: 20px; }
+	fieldset {
+		margin-bottom: 13px; }
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	textarea {
+		border: 1px solid #ccc;
+		padding: 6px 4px;
+		outline: none;
+		font-family: 'Detail Atlas Regular', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #777;
+		padding: 9px 8px 6px 8px;
+		margin: 0;
+		font-size: 14px;
+		width: 97%;
+		max-width: 97%;
+		display: block;
+		margin-bottom: 15px;
+		background: #fff; }
+	select {
+		-moz-appearance: none;
+    	text-indent: 0.01px;
+    	text-overflow: '';
+		outline: none;
+		font-family: 'Detail Atlas Regular', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #333;
+		margin: 0;
+		font-size: 14px;
+		width: 97%;
+		max-width: 97%;
+		display: block;
+		cursor: pointer;
+	    padding: 9px 8px 4px 8px;
+	    width: 130%;
+	    border: none;
+	    box-shadow: none;
+	    background: transparent;
+	    background-image: none;
+	    -webkit-appearance: none;
+		background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 98% 40%;}
+
+	.select-drop {
+	border: 1px solid #ccc;
+    overflow: hidden;
+    margin-bottom: 15px;
+	}
+
+	input[type="text"]:focus,
+	input[type="password"]:focus,
+	input[type="email"]:focus,
+	textarea:focus {
+		border: 1px solid #aaa;
+ 		color: #444;
+ 		-moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+		-webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+		box-shadow:  0 0 3px rgba(0,0,0,.2); }
+	textarea {
+		min-height: 100px; }
+	label,
+	legend {
+		display: block;
+		font-family: 'Detail Atlas Medium', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: 14px; 
+		color: #222; }
+	form label {
+		margin-bottom: 7px;
+	}
+	form fieldset label {
+		margin-bottom: 3px;
+	}
+	legend {
+		margin-bottom: 7px;
+	}
+	select {
+		width: 100%; }
+	input[type="checkbox"],
+	input[type="radio"] {
+		display: inline;
+		vertical-align: 0.1em;
+		display: none;}
+
+
+
+	label.checkbox:before {
+		content: "";
+		vertical-align: -0.2em;
+		display: inline-block;
+		width: 13px;
+		height: 13px;
+		margin-right: 5px;
+		background-color: #fff;
+		border: 1px solid #ccc;
+		text-align: center;
+		line-height: 13px;
+		font-size: 13px;
+		
+	}
+	label.checkbox {
+		cursor: pointer;
+		margin-bottom: 5px;
+	}
+
+	input[type=checkbox]:checked + label.checkbox:before {  
+    content: "\2716"; 
+   	vertical-align: 0.05em;
+    color: #333;  
+    border: 1px solid #333;
+	}
+
+	@media (-webkit-min-device-pixel-ratio: 1.5) {
+		input[type=checkbox]:checked + label.checkbox:before {  
+    		content: "\2716"; 
+			text-indent: -1.5px;
+    		line-height: 16px;
+	}
+		input[type=radio]:checked + label.radio:before {  
+		    content: "\25CF"; 
+			text-indent: -0.5px;
+    		line-height: 16.5px;
+	}
+
+	}
+
+	@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+  	input[type=radio]:checked + label.radio:before {  
+		    content: "\25CF"; 
+    		line-height: 12.5px;
+	}
+	input[type=checkbox]:checked + label.checkbox:before {  
+    		content: "\2716"; 
+    		line-height: 12.5px;
+    		text-indent: 0.5px;
+	}
+	}
+
+	label.radio:before {
+		content: "";
+		vertical-align: -0.2em;
+		display: inline-block;
+		width: 13px;
+		height: 13px;
+		border-radius: 1em;
+		margin-right: 5px;
+		background-color: #fff;
+		border: 1px solid #ccc;
+		text-align: center;
+		line-height: 13px;
+		font-size: 13px;
+		
+	}
+	label.radio {
+		cursor: pointer;
+		margin-bottom: 5px;
+	}
+	input[type=radio]:checked + label.radio:before {  
+    content: "\25CF"; 
+   	vertical-align: 0.05em;
+    color: #333;  
+    border: 1px solid #333;
+	}
+
+	label span,
+	legend span {
+		font-weight: normal;
+		font-size: 13px;
+		color: #333;
+		font-family: 'Detail Atlas Regular', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+
+	/* Hamburger Menu
+	================================================== */
+
+	.main-menu {
+			position: absolute;
+			z-index: 10;
+			top: 25px;
+			right: 0px;
+			height: 25px;
+			width: 30px;
+			background-image: url('../images/menu.svg');
+			background-repeat: no-repeat;
+			background-size: 30px 57px;
+			cursor: pointer;
+			z-index: 100;
+			-webkit-transition: background-position 1s ease;
+	 	    -moz-transition: background-position 1s ease;
+	  	    -o-transition: background-position 1s ease;
+	 	    transition: background-position 1s ease;
+		}
+
+	nav {
+			position: absolute;
+			top: 25px;
+			right: 60px;
+			height: 25px;
+		}
+		
+	nav ul {
+		position: relative;
+		display: block;
+		opacity: 0;
+		display: none;
+	}
+
+	nav ul.open {
+		opacity: 1;
+		margin-bottom: 0px;
+		-webkit-transition: opacity 1s ease;
+	}
+
+	nav ul li {
+		display: inline-block;
+		font-size: 18px;
+		margin-right: 25px;
+		margin-top: 5px;
+	}
+
+	nav ul li a {
+		text-decoration: none;
+		border-bottom: 1px solid transparent;
+		padding-bottom: 10px;
+	}
+
+	nav ul li a:hover {
+		padding-bottom: 2px;
+		border-bottom: 2px solid #e42521;
+		}
+
+	.close-menu {
+		background-position: 0px -30px;
+
+	}
+
+	.homepage nav ul {
+		opacity: 1;
+		display: block;
+	}
+
+
+	.homepage nav {
+			right: 0px;
+		}
+
+	.homepage nav ul li:last-child {
+		margin-right: 0px;
+	}
+
+
+
+/* #Misc
+================================================== */
+	.remove-bottom { margin-bottom: 0 !important; }
+	.half-bottom { margin-bottom: 10px !important; }
+	.add-bottom { margin-bottom: 20px !important; }
+	.ten-padding { padding: 10px !important; display: inline-block;}
+
+	.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+	}
+
+	.portfolio-image-hover-info {
+		display: none;
+		bottom: 30px;
+		left: 25px;
+		position: absolute;
+		line-height: 1.15;
+	}
+
+	.portfolio-image-hover-info h4:hover, .portfolio-image-hover-info span:hover {
+		text-decoration: underline;
+	}
+
+	.image-hover-link:hover span.portfolio-image-hover-info {
+		display: block;
+	}
+
+	.image-hover-link {
+		background-color: transparent;
+		line-height: 0px;	
+		display: block;
+		-webkit-transition: background-color 0.25s ease-out;
+	    -moz-transition: background-color 0.25s ease-out;
+	    -o-transition: background-color 0.25s ease-out;
+	    transition: background-color 0.25s ease-out;
+	}
+
+	.image-hover-link:hover {
+		background-color: red;
+		line-height: 0px;
+		display: block;
+		-webkit-transition: background-color 0.25s ease-out;
+	    -moz-transition: background-color 0.25s ease-out;
+	    -o-transition: background-color 0.25s ease-out;
+	    transition: background-color 0.25s ease-out;
+	}
+
+	.image-hover-link:hover img {
+		-webkit-filter: grayscale(1); -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%);
+		filter: gray; filter: grayscale(100%);
+		filter: url(desaturate.svg#greyscale);
+		opacity: 0.15;
+		-webkit-transition: opacity 500ms ease-out;
+	    -moz-transition: opacity 500ms ease-out;
+	    -o-transition: opacity 500ms ease-out;
+	    transition: opacity 500ms ease-out;
+	}
+
+	/* iPad only styles */ 
+	@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+	.portfolio-image-hover-info {
+		display: inline-block;
+		position: relative;
+		bottom: 0px;
+		left: 0px;
+		top: 7px;
+		margin-bottom: 10px;
+	}
+	}
+
+
+
