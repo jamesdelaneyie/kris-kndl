@@ -17,6 +17,7 @@ background-position: 0% 95%, 100% 95%, 0% 95%;
 }
 
 .logo {
+	opacity: 0.1;
 	display: block;
 	font-family: 'Detail Atlas Medium', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 28px;
@@ -26,10 +27,11 @@ background-position: 0% 95%, 100% 95%, 0% 95%;
 	margin-top: 22px;
 }
 
-img {
-	margin-bottom: -0.35em;
+
+.logo:hover {
+	opacity: 1;
 }
 
-body {
-	background-color: red;
+img {
+	margin-bottom: -0.35em;
 }

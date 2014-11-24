@@ -82,42 +82,44 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-
+<style>
+.wrapper {
+    width: 380px !important;
+}
+</style>
 	<div class="wrapper">
 
 	<div class="container">
 	<div class="row">
-		<div class="four columns alpha omega offset-by-four s-half xs-full"><br>
+		<div class="twelve columns alpha omega"><br>
       <a href="http://localhost:8888/Detail_Site_Final/app/homepage.html" class="logo">Detail<span class="dot">.</span></a>
-			<h1 style="font-size: 24px; font-family: 'Detail Atlas Medium'; letter-spacing: 0px;">Kris Krindle Generator</h1>
-			<p style="color: #222; max-width: 350px">Our magical javascript elves will match everyone and send an email with all the info here.<br><br>If you want a list that you can check twice, you can download a txt file of the matches as well</p>
-
-			<form class="details" action="" method="post">
-        <p style="opacity: 0.6; margin-bottom: -7.5px;">Enter names and emails:</p>
+      <img src="presents.png"><br><br>
+			<h1 style="font-size: 32px; text-align: center;" >Kris Krindle Generator</h1>
+			<p style="color: #222; text-align: center; font-size: 16px; line-height: 1.65em;">A tiny app that takes a list of names and randomly matches them together for some office gift giving.</p>
+            <br><br>
+			<form class="details" action="" method="post" style="margin-top: -40px;">
 				<fieldset>
 				<!-- Text input-->
-					<br>
-
 					<div class="one-person-details-1">
-				 	 	<input name="name" class="name-input" type="text" placeholder="Name" style="width: 33%; margin-right: 10px;float: left;">
-				  		<input name="email" class="email-input" type="text" placeholder="Email" style="width: 33%;">
+				 	 	<input name="name" class="name-input" type="text" placeholder="Name" style="width: 42%; margin-right: 5%;float: left;">
+				  		<input name="email" class="email-input" type="text" placeholder="Email" style="width: 42%;">
 				  </div>
 				  	<div class="one-person-details">
-				 	 	<input name="name" class="name-input" type="text" placeholder="Name" style="width: 33%; margin-right: 10px;float: left;">
-				  		<input name="email" class="email-input" type="text" placeholder="Email" style="width: 33%;">
+				 	 	<input name="name" class="name-input" type="text" placeholder="Name" style="width: 42%; margin-right: 5%;float: left;">
+				  		<input name="email" class="email-input" type="text" placeholder="Email" style="width: 42%;">
 				  	</div>
 				  	<div class="one-person-details">
-				 	 	<input name="name" class="name-input" type="text" placeholder="Name" style="width: 33%; margin-right: 10px;float: left;">
-				  		<input name="email" class="email-input" type="text" placeholder="Email" style="width: 33%;">
+				 	 	<input name="name" class="name-input" type="text" placeholder="Name" style="width: 42%; margin-right: 5%;float: left;">
+				  		<input name="email" class="email-input" type="text" placeholder="Email" style="width: 42%;">
 				  	</div>
 				  	<div class="one-person-details">
-				 	 	<input name="name" class="name-input" type="text" placeholder="Name" style="width: 33%; margin-right: 10px;float: left;">
-				  		<input name="email" class="email-input" type="text" placeholder="Email" style="width: 33%;">
+				 	 	<input name="name" class="name-input" type="text" placeholder="Name" style="width: 42%; margin-right: 5%;float: left;">
+				  		<input name="email" class="email-input" type="text" placeholder="Email" style="width: 42%;">
 				  	</div>
 
-				  	<button id="addperson" type="button">+</button><br><br>
+				  	<a id="addperson" style="width: 100%; font-size: 14px; text-align: center; display: block; opacity: 0.4;cursor: pointer; margin-bottom: -10px;">+ Add Person</a><br>
 
-				  	<buttomn id="matchandsend" type="button" class="button lrg" style="padding-top: 17px; padding-bottom: 13px;"/>Match &amp; Send</button>
+				  	<button id="matchandsend" type="button" class="button lrg" style="padding-top: 17px; padding-bottom: 13px; width: 100%;"/>Match &amp; Send</button>
 
 				  	
 
@@ -158,8 +160,18 @@ function getInfoNew() {
 			email: personEmail
 		}
 
-		peopleArray.push(personName);
-		giversArray.push(personName);
+        if (personName.firstName != '' && personName.email != '') {
+            peopleArray.push(personName);
+            giversArray.push(personName);
+        } else {
+            alert('Please fill in all fields before matching and sending')
+        }
+
+        if (giversArray.length < 2) {
+            return;
+            alert('Please input more than 1 person to Match and Send');
+        }
+		
 
 	})
 	//get the number of people in the array
@@ -192,9 +204,9 @@ function pickNames() {
 				getRandom();
 				if (randomPerson.firstName === thisPerson.firstName) {
 					getRandom();
-          if (randomPerson.firstName === thisPerson.firstName) {
-          getRandom();
-          }
+                        if (randomPerson.firstName === thisPerson.firstName) {
+                            getRandom();
+                    }
 				}
 			}
 
@@ -216,7 +228,24 @@ function pickNames() {
 }
 
 function passToPHP() {
-    var json_str = JSON.stringify(peopleArray); 
+
+    $.ajax(
+                {
+                    type: "POST",
+                    url: 'email.php',
+                    data: 
+                    {
+                        'givers': JSON.stringify(giversArray)
+                    },
+                    success: function()
+                    {
+                        alert('Emails Sent');
+                    },
+                    error: function()
+                    {
+                        alert('Error encountered. Please reload the page and try again')
+                    }
+                });
 }
 
 //get people and push them into array
