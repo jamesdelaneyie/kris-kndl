@@ -1,4 +1,6 @@
 Kris_Krindle
 ============
 
-App to generate Kris Kindle lists and email them to people 
+Tiny jQuery and PHP app that takes a list of people and a budget then matches everyone with a partner and sends out an email to all participants
+
+#secretsanta
